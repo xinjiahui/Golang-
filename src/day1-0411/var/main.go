@@ -25,5 +25,6 @@ func main(){
 	//简短变量声明,只能在函数中用
 	s3 := "hahaha"
 	fmt.Println(s3)
-
+	// 
+    
 }
