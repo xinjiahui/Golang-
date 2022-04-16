@@ -39,7 +39,33 @@ func main() {
 	}
 	//not取反，原来为真就为假
 	isMarried := false
-	fmt.Println(isMarried)
-	fmt.Println(!isMarried)
-
+	fmt.Println(isMarried)  //false
+	fmt.Println(!isMarried) //true
+	// 位运算：针对的是二进制数
+	// &： 安位与，2位都是1，为1
+	fmt.Println(5 & 2) //000
+	// |:按位或,两位有一个为1就为1
+	fmt.Println(5 | 2) // 111
+	// ^： 按位异或（两位不一样的则为1）
+	fmt.Println(5 ^ 2) // 111
+	// <<: 将二进制位左移指定位数
+	fmt.Println(5 << 1)  // 1010-> 10
+	fmt.Println(1 << 10) // 10000000000-> 1024
+	// >> :将二进制位右移指定位数
+	fmt.Println(5 >> 1) // 10->2
+	var m = int8(1)
+	fmt.Println(m << 10) //1024,不建议
+	// 赋值运算，用来给变量赋值的
+	var x int
+	x = 10
+	x += 1  //x = x + 1
+	x -= 1  //x = x - 1
+	x *= 2  //x = x * 2
+	x /= 2  //x = x / 2
+	x %= 2  //x = x % 2
+	x <<= 2 //  x = x << 2
+	x &= 2  // x = x & 2
+	x |= 3  // x = x | 3
+	x ^= 4  //x = x ^ 4
+	x >>= 2 // x = x >> 21
 }
