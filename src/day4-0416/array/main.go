@@ -35,9 +35,9 @@ func main() {
 	for i, v := range citys {
 		fmt.Println(i, v)
 	}
-	//多维数组
+	//多维数组，只有最外层可以使用...
 	// [[1 2][3 4] [5 6]]
-	var a11 [3][2]int
+	var a11 [3][2]int //三个元素，每个元素是长度为2的int类型数组
 	a11 = [3][2]int{
 		[2]int{1, 2},
 		[2]int{3, 4},
