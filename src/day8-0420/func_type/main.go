@@ -29,6 +29,7 @@ func f5(x func() int) func(int, int) int {
 	return ff
 }
 func main() {
+	// a 和 b 是不同类型b
 	a := f1
 	fmt.Printf("%T\n", a)
 	b := f2
@@ -37,5 +38,5 @@ func main() {
 	f3(b)
 	//f3(f4)
 	f7 := f5(f2)
-	fmt.Println(f7) //打印的是内存地址
+	fmt.Printf("%T\n", f7) //打印的是内存地址
 }

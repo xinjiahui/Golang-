@@ -18,6 +18,8 @@ func f1() {
 func main() {
 	f1()
 	//fmt.Println(name) //函数内部定义的变量只能在该函数内部使用
+
+	// 语句块作用域
 	if i := 10; i < 18 {
 		fmt.Println("乖乖上学")
 	}
