@@ -24,11 +24,34 @@ var (
 func main() {
 	left := dispathCoin()
 	fmt.Println("剩下： ", left)
+	for k, v := range distribution {
+		fmt.Printf("%s:%d\n", k, v)
+	}
+
 }
 
-func dispathCoin() {
+func dispathCoin() (left int) {
 	//1.依次拿到每个人的名字
-	//2.拿到一个人名根据分金币的规则去分金币
+	for _, name := range users {
+		for _, c := range name {
+			switch c {
+			case 'e', 'E':
+				distribution[name]++
+				coins--
+			case 'i', 'I':
+				distribution[name] += 2
+				coins -= 2
+			case 'o', 'O':
+				distribution[name] += 3
+				coins -= 3
+			case 'u', 'U':
+				distribution[name] += 4
+				coins -= 4
+			}
+		}
+
+	}
+	left = coins
 	//2.1每个人分的金币数应该保存到distribution中
 	//2.2还要记录下剩余的金币数
 	//3.整个第二步执行完就能得到最终每个人的金币数和剩余金币数
