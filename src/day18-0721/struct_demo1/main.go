@@ -26,4 +26,12 @@ func main() {
 	p2.name = "test"
 	p2.age = 18
 	fmt.Printf("type: %T value: %v\n", p2, p2)
+	// 匿名结构体,用于临时使用
+	var s struct {
+		x string
+		y int
+	}
+	s.x = "嘿嘿嘿"
+	s.y = 100
+	fmt.Printf("type: %T  value:%v\n", s, s)
 }
