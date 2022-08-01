@@ -10,6 +10,9 @@ func (m myInt) hello() {
 }
 
 func main() {
+
 	m := myInt(100)
+	fmt.Println(m)
 	m.hello()
+
 }
