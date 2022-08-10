@@ -14,11 +14,13 @@ var (
 	allStudent map[int64]*student //变量声明
 )
 
+//结构体
 type student struct {
 	id   int64
 	name string
 }
 
+//构造函数
 func newStudent(id int64, name string) student {
 	return student{
 		id:   id,
@@ -59,7 +61,7 @@ func deleteStudent() {
 	delete(allStudent, deleteID)
 }
 func main() {
-	allStudent = make(map[int64]*student, 48) //初始化，开辟内存空间
+	allStudent = make(map[int64]*student, 48) //初始化map，开辟内存空间
 	for {
 		//1.打印菜单
 		fmt.Println("欢迎管理学生管理系统")
