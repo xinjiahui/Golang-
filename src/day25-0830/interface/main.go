@@ -6,7 +6,10 @@ import "fmt"
 //基本数据类型
 //结构体类型（可以放各个维度的数据）
 // 引出接口的实例
-
+//定义一个能叫的类型
+type speaker interface {
+	speak() //只要实现了speak方法的变量都是speaker类型，方法签名
+}
 type cat struct{}
 type dog struct{}
 type persion struct{}
@@ -21,10 +24,11 @@ func (p persion) speak() {
 	fmt.Println("啊～")
 }
 
-func da() {
+func da(x speaker) {
 	//接收一个参数，传进来什么我就打什么
 	x.speak() //挨打了就要叫
 }
+
 func main() {
 	var c1 cat
 	var d1 dog
@@ -33,4 +37,9 @@ func main() {
 	da(c1)
 	da(d1)
 	da(p1)
+	var ss speaker //定义一个接口类型：speaker 的变量ss
+	ss = c1
+	ss = d1
+	ss = p1
+	fmt.Println(ss)
 }
