@@ -1,5 +1,6 @@
 package main
 
+//全局声明--->init()--->main()
 import (
 	test "Golang-/src/day27-0902/package/hahha-calc" //别名
 	"fmt"

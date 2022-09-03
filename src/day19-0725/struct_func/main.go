@@ -12,6 +12,7 @@ type persion struct {
 //构造函数
 //返回的是结构体还是结构体指针
 //当结构体比较大的时候，尽量使用结构体指针，减少程序的内存开销
+
 func newPersion(name string, age int) *persion {
 	return &persion{
 		name: name,

@@ -12,4 +12,5 @@ func main() {
 	fmt.Printf("%p\n", &a)
 	fmt.Printf("%p\n", b)  //b的值
 	fmt.Printf("%p\n", &b) //b的内存地址
+
 }

@@ -45,5 +45,5 @@ func main() {
 		feet: 2,
 	}
 	a1 = kfc
-	fmt.Printf("%T\n", a1) //接口保存的分为两部分，值的类型和值本身
+	fmt.Printf("%T\n", a1) //接口保存的分为两部分，值的类型和值本身，interface是一种抽象的类型
 }
