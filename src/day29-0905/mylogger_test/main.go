@@ -9,7 +9,7 @@ import (
 
 func main() {
 	//log := mylogger.NewLog("Error")
-	log := mylogger.NewFileLogger("Error", "./", "xinjiahui.log", 10*1024*1024)
+	log := mylogger.NewFileLogger("Info", "./", "xinjiahui.log", 10*1024)
 	for {
 		log.Debug("这是一条Debug日志")
 		log.Info("这是一条Info日志")
