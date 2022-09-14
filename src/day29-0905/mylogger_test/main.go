@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Golang-/src/day29-0904/mylogger"
+	"Golang-/src/day29-0905/mylogger"
 	"time"
 )
 
