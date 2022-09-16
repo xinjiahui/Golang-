@@ -96,12 +96,13 @@ func loadIni(fileName string, data interface{}) (err error) {
 			}
 			index := strings.Index(line, "=")
 			key := strings.TrimSpace(line[:index])
+			//fmt.Printf("key:%s----\n", key)
 			value := strings.TrimSpace(line[index+1:])
 			//2.根据structName，去data里面把对应的嵌套结构体取出来
 			v := reflect.ValueOf(data)
 			sValue := v.Elem().FieldByName(structName) //拿到嵌套结构体的值信息
-			sType := sValue.Type()                     //拿到嵌套结构体的类型信息
-
+			//fmt.Println(sValue)
+			sType := sValue.Type() //拿到嵌套结构体的类型信息
 			if sType.Kind() != reflect.Struct {
 				err = fmt.Errorf("data中的%s字段应该是一个结构体", structName)
 				return
@@ -112,8 +113,7 @@ func loadIni(fileName string, data interface{}) (err error) {
 			for i := 0; i < sValue.NumField(); i++ {
 				filed := sType.Field(i) //tag信息是存储在类型信息中的
 				fileType = filed
-				//a := filed.Tag.Get("ini")
-				//fmt.Println(a)
+				//fmt.Println(fileType.Tag.Get("ini"))
 				if filed.Tag.Get("ini") == key {
 					//	找到了对应的字段
 					fieldName = filed.Name
