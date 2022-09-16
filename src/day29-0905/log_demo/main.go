@@ -15,7 +15,7 @@ import (
 // Warning
 // Error
 // Fatal
-
+//日志要支持开关
 // log demo
 
 func main() {
