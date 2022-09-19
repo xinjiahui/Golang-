@@ -37,5 +37,6 @@ func BufChannel() {
 
 }
 func main() {
+	noBufChannel()
 	BufChannel()
 }
