@@ -1,0 +1,12 @@
+[2022-09-21 23:00:39] [INFO] [file.go:(*FileLogger):178] 这是一条Info日志
+[2022-09-21 23:00:39] [WARNING] [file.go:(*FileLogger):187] 这是一条warning日志
+[2022-09-21 23:00:39] [ERROR] [file.go:(*FileLogger):190] 这是一条error日志,id:10010,name:辛佳慧
+[2022-09-21 23:00:39] [FATAL] [file.go:(*FileLogger):194] 这是一条fatal日志
+[2022-09-21 23:00:40] [INFO] [file.go:(*FileLogger):178] 这是一条Info日志
+[2022-09-21 23:00:40] [ERROR] [file.go:(*FileLogger):190] 这是一条error日志,id:10010,name:辛佳慧
+[2022-09-21 23:00:40] [WARNING] [file.go:(*FileLogger):187] 这是一条warning日志
+[2022-09-21 23:00:40] [FATAL] [file.go:(*FileLogger):194] 这是一条fatal日志
+[2022-09-21 23:00:41] [INFO] [file.go:(*FileLogger):178] 这是一条Info日志
+[2022-09-21 23:00:41] [WARNING] [file.go:(*FileLogger):187] 这是一条warning日志
+[2022-09-21 23:00:41] [ERROR] [file.go:(*FileLogger):190] 这是一条error日志,id:10010,name:辛佳慧
+[2022-09-21 23:00:41] [FATAL] [file.go:(*FileLogger):194] 这是一条fatal日志
