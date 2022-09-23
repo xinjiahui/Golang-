@@ -8,9 +8,9 @@ import (
 
 //rwlock
 var (
-	x      = 0
-	wg     sync.WaitGroup
-	lock   sync.Mutex
+	x  = 0
+	wg sync.WaitGroup
+	//lock   sync.Mutex
 	rwlock sync.RWMutex
 )
 
