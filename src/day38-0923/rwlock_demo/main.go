@@ -39,11 +39,11 @@ func main() {
 		go write()
 		wg.Add(1)
 	}
-	//time.Sleep(time.Second)
+	time.Sleep(time.Second)
 	for i := 0; i < 1000; i++ {
 		go read()
 		wg.Add(1)
 	}
 	wg.Wait()
-	fmt.Println(time.Now().Sub(start))
+	fmt.Println(time.Since(start))
 }
