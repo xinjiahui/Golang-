@@ -1,0 +1,29 @@
+package split_string
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestSplit(t *testing.T) {
+	ret := Split("backfsbsf", "b")
+	want := []string{"", "ackfs", "sf"}
+	if !reflect.DeepEqual(ret, want) {
+		t.Errorf("want:%v but got:%v", want, ret)
+	}
+}
+func Test2Split(t *testing.T) {
+	ret := Split("test:fsf", ":")
+	want := []string{"test", "fsf"}
+	if !reflect.DeepEqual(ret, want) {
+		t.Errorf("want:%v but got:%v", want, ret)
+	}
+}
+
+func Test3Split(t *testing.T) {
+	ret := Split("abcef", "bc")
+	want := []string{"a", "ef"}
+	if !reflect.DeepEqual(ret, want) {
+		t.Fatalf("want:%v but got:%v", want, ret)
+	}
+}
