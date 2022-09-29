@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 //关闭通道
-var ch1 chan<- int
+//var ch1 chan<- int
 
 func main() {
 	ch1 := make(chan int, 2)
