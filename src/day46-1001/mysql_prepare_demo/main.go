@@ -38,9 +38,9 @@ type user struct {
 
 func prepareInsert() {
 	sqlStr := `insert into user(name,age) values(?,?)`
-	stmt, err := db.Prepare(sqlStr)
+	stmt, err := db.Prepare(sqlStr) //把SQL语句先发给mysql预处理一下
 	if err != nil {
-		fmt.Printf("prepare failed ,err:%v\n,err")
+		fmt.Printf("prepare failed ,err:%v\n", err)
 		return
 	}
 	defer stmt.Close()
@@ -52,7 +52,7 @@ func prepareInsert() {
 		"ligai": 15,
 	}
 	for k, v := range m {
-		stmt.Exec(k, v)
+		stmt.Exec(k, v) //后续只需要传值
 	}
 
 }
