@@ -61,9 +61,10 @@ replace(
 
 ```
 1. export GO111MODULE=on
-2. go mod init
-3. go env -w GOPROXY=https://goproxy.cn,direct
-4. go get
+2. go mod init [包名] //初始化项目
+3. go mod tidy  检查依赖
+4. export GOPROXY=https://goproxy.cn 
+5. go get
 ```
 
 

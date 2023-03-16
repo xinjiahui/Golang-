@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-// 		切片的练习题
+// 切片的练习题
 func main() {
 	var a = make([]string, 5, 10) // 创建长度为5容量为10的切片
 	for i := 0; i < 10; i++ {

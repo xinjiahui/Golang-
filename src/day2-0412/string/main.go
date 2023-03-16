@@ -4,17 +4,19 @@ package main
 //Go语言中单引号包裹的的字符！
 
 // 字符串
-import "fmt"
-import "strings"
+import (
+	"fmt"
+	"strings"
+)
 
-func main(){
-	path  := "\"D:\\Go\\src\\code\\day01\""
+func main() {
+	path := "\"D:\\Go\\src\\code\\day01\""
 	fmt.Println(path)
 
 	s := "I am ok"
 	fmt.Println(s)
 	//定义多行字符串
-    s2 := `
+	s2 := `
 	世情薄
 	人情恶
 	雨送黄昏花易落
@@ -25,11 +27,11 @@ func main(){
 	fmt.Println(len(s3))
 	//字符串拼接
 	name := "jiahui"
-	world := "haoren"
+	world := " haoren"
 
 	ss := name + world
 	fmt.Println(ss)
-	ss1 := fmt.Sprintf("%s%s",name,world)
+	ss1 := fmt.Sprintf("%s%s", name, world)
 	fmt.Println(ss1)
 	//分割
 	ret := strings.Split(s3, "\\")
@@ -38,10 +40,10 @@ func main(){
 	fmt.Println(strings.Contains(ss, "jiahui"))
 
 	// 前缀
-	fmt.Println(strings.HasPrefix(ss,"jiahui"))
-	fmt.Println(strings.HasSuffix(ss,"hui"))
+	fmt.Println(strings.HasPrefix(ss, "jiahui"))
+	fmt.Println(strings.HasSuffix(ss, "hui"))
 
 	// 拼接
-	fmt.Println(strings.Join(ret,"+"))
+	fmt.Println(strings.Join(ret, "+"))
 
 }
