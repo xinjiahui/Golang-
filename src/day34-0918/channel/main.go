@@ -5,9 +5,9 @@ import (
 	"sync"
 )
 
-//实际上很多事情只有你一个人在遗憾
 //var a []int
-var b chan int //需要指定通道中元素的类型
+//需要指定通道中元素的类型
+var b chan int
 var wg sync.WaitGroup
 
 func noBufChannel() {
@@ -34,7 +34,6 @@ func BufChannel() {
 	x := <-b
 	fmt.Println("从通道b中取到了", x)
 	close(b)
-
 }
 func main() {
 	noBufChannel()

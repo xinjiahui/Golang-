@@ -32,5 +32,4 @@ func main() {
 	//删除
 	delete(m1, "jiwuling")
 	fmt.Println(m1)
-
 }

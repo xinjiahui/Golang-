@@ -30,6 +30,7 @@ func main() {
 	world := " haoren"
 
 	ss := name + world
+	fmt.Println(len(ss))
 	fmt.Println(ss)
 	ss1 := fmt.Sprintf("%s%s", name, world)
 	fmt.Println(ss1)
@@ -42,7 +43,10 @@ func main() {
 	// 前缀
 	fmt.Println(strings.HasPrefix(ss, "jiahui"))
 	fmt.Println(strings.HasSuffix(ss, "hui"))
-
+	//字串出现的位置
+	s4 := "abcde"
+	fmt.Println(strings.Index(s4, "c"))
+	fmt.Println(strings.LastIndex(s4, "b"))
 	// 拼接
 	fmt.Println(strings.Join(ret, "+"))
 
